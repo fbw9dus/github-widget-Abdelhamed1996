@@ -1,0 +1,15 @@
+h5{
+    margin:0px;
+}
+
+.content{
+    margin-bottom: 2vw;
+    border-bottom: 1px solid gray;
+}
+span{
+    color: gray;
+}
+
+.date{
+    float: right;
+}
