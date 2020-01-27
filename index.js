@@ -9,14 +9,11 @@ class gitHubWidget {
     }
     
     async getRepositoriesData(){
-        await fetch(`https://api.github.com/users/${this.UserNameInput.value}/repos`)
-       .then((response) => {
-         return response.json()
-       })
-       .then((myJson) => {
-           this.repoData= myJson
-         console.log(this.repoData)
-       })
+        let response= await fetch(`https://api.github.com/users/${this.UserNameInput.value}/repos`)
+       
+        let myJson =await response.json();
+       this.repoData= myJson
+       
        this.repoData.forEach(element => {
            
         list.insertAdjacentHTML("beforeend",`
